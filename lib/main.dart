@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 // import 'package:mixtur3/LoginPage.dart';
 // import 'package:mixtur3/MarketPlace.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mixtur3/LoginPage.dart';
+import 'package:mixtur3/login_page.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+// import 'package:firebase_core/firebase_core.dart';
+// import 'firebase_options.dart';
 void main() {
   runApp(const MaterialApp(
     title: 'MIXTUR3',
@@ -13,15 +15,13 @@ void main() {
   ));
 }
 
-
-
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.black,
+        color: Colors.blue,
         child: SafeArea(
           top: true,
           bottom: false,
@@ -77,7 +77,7 @@ class MyApp extends StatelessWidget {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15),
                                 image: const DecorationImage(
-                                  image: AssetImage('images/kendrik.jpeg'),
+                                  image: AssetImage('images/l3.jpg'),
                                   fit: BoxFit.cover,
                                 ),
                               ),
@@ -109,7 +109,7 @@ class MyApp extends StatelessWidget {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15),
                                 image: const DecorationImage(
-                                  image: AssetImage('images/weeknd.jpeg'),
+                                  image: AssetImage('images/l2.jpg'),
                                   fit: BoxFit.cover,
                                 ),
                               ),
@@ -125,7 +125,7 @@ class MyApp extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           image: const DecorationImage(
-                            image: AssetImage('images/Logo.png'),
+                            image: AssetImage('images/L1.jpg'),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -134,7 +134,7 @@ class MyApp extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(height: 50),
+              const SizedBox(height: 100),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
@@ -150,41 +150,39 @@ class MyApp extends StatelessWidget {
                           color: Colors.white,
                         ),
                         children: <TextSpan>[
-                          const TextSpan(
-                              text: 'Mint Music \n',
-                              style: TextStyle(
-                                color: Colors.white,
-                              )),
                           TextSpan(
-                            text: 'NFTs \n',
+                            text: 'Laundromat \n',
                             style: GoogleFonts.poppins(
-                                fontSize: 40,
-                                fontWeight: FontWeight.bold,
-                                // color: const Color(0xFFd5e154),
-                                color: Colors.orange),
+                              fontSize: 40,
+                              fontWeight: FontWeight.bold,
+                              color: const Color(0xFFd5e154),
+                              // color: Colors.orange
+                            ),
                           ),
                           const TextSpan(
-                              text: 'in a wink!',
+                              text:
+                                  'Your one stop shop for all your laundry needs',
                               style: TextStyle(
                                 color: Colors.white,
+                                fontSize: 20,
                               )),
                         ],
                       ),
                     ),
                     const SizedBox(
-                      height: 40,
+                      height: 100,
                       width: 250,
-                      child: Divider(
-                        color: Colors.white,
-                      ),
+                      // child: Divider(
+                      //   color: Colors.white,
+                      // ),
                     ),
-                      ElevatedButton(
-                        child: Container(
+                    TextButton(
+                      child: Container(
                         height: 75,
                         width: double.infinity,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(50),
-                          color: Colors.orange,
+                          color: Colors.green,
                         ),
                         child: Center(
                           child: Row(
@@ -192,16 +190,18 @@ class MyApp extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Text(
-                                'Connect Wallet',
+                                'Login',
                                 style: GoogleFonts.poppins(
                                   fontSize: 20,
                                   fontWeight: FontWeight.w600,
                                   color: Colors.black,
                                 ),
                               ),
-                              const SizedBox(width: 10,
-                               child: Divider(color: Colors.white,)
-                              ),
+                              const SizedBox(
+                                  width: 10,
+                                  child: Divider(
+                                    color: Colors.white,
+                                  )),
                               const Icon(
                                 FontAwesomeIcons.arrowRight,
                                 size: 20,
@@ -212,7 +212,12 @@ class MyApp extends StatelessWidget {
                         ),
                       ),
                       onPressed: () {
-                        const LoginPage();
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => LoginPage(),
+                          ),
+                        );
                       },
                     ),
                   ],

@@ -41,6 +41,7 @@ dependencies:
   just_audio: ^0.9.30
   google_fonts: ^3.0.1
   font_awesome_flutter: ^10.2.1
+  firebase_core: ^2.7.0
 
 dev_dependencies:
   flutter_test:
