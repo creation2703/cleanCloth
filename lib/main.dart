@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 // import 'package:mixtur3/LoginPage.dart';
 // import 'package:mixtur3/MarketPlace.dart';
 import 'package:google_fonts/google_fonts.dart';
-// import 'package:mixtur3/LoginPage.dart';
+import 'package:mixtur3/LoginPage.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
@@ -12,6 +12,8 @@ void main() {
     home: MyApp(),
   ));
 }
+
+
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -126,7 +128,7 @@ class MyApp extends StatelessWidget {
                             image: AssetImage('images/Logo.png'),
                             fit: BoxFit.cover,
                           ),
-                        ), 
+                        ),
                       ),
                     ),
                   ],
@@ -169,16 +171,6 @@ class MyApp extends StatelessWidget {
                         ],
                       ),
                     ),
-                    // const SizedBox(height: 5,),
-                    // Text(
-                    //   'From your mobile',
-                    //   style: GoogleFonts.poppins(
-                    //     fontSize: 15,
-                    //     fontWeight: FontWeight.w500,
-                    //     color: Colors.black,
-                    //   ),
-                    //   textAlign: TextAlign.center,
-                    // ),
                     const SizedBox(
                       height: 40,
                       width: 250,
@@ -186,16 +178,8 @@ class MyApp extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    GestureDetector(
-                      onTap: () {
-                        // await Provider.of<Web3LinkingProvider>(context, listen: false)
-                        //     .connectMetaMask();
-                        // await Provider.of<Web3LinkingProvider>(context, listen: false).getCredentials();
-                      },
-                      // onPressed: () {
-                      //   const LoginPage();
-                      // },
-                      child: Container(
+                      ElevatedButton(
+                        child: Container(
                         height: 75,
                         width: double.infinity,
                         decoration: BoxDecoration(
@@ -215,7 +199,9 @@ class MyApp extends StatelessWidget {
                                   color: Colors.black,
                                 ),
                               ),
-                              const SizedBox(width: 10),
+                              const SizedBox(width: 10,
+                               child: Divider(color: Colors.white,)
+                              ),
                               const Icon(
                                 FontAwesomeIcons.arrowRight,
                                 size: 20,
@@ -225,6 +211,9 @@ class MyApp extends StatelessWidget {
                           ),
                         ),
                       ),
+                      onPressed: () {
+                        const LoginPage();
+                      },
                     ),
                   ],
                 ),
