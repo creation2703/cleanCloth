@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 // import 'package:mixtur3/LoginPage.dart';
 // import 'package:mixtur3/MarketPlace.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mixtur3/login_page.dart';
+import 'page.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 // import 'package:firebase_core/firebase_core.dart';
 // import 'firebase_options.dart';
 void main() {
   runApp(const MaterialApp(
-    title: 'MIXTUR3',
+    title: 'LaundroMat',
     home: MyApp(),
   ));
 }

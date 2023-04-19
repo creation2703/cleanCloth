@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "fir-ddemo-edbab",
+    "staging": "laundromat-58dce"
+  },
+  "targets": {},
+  "etags": {}
+}
